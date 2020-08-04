@@ -7,8 +7,21 @@ Introduction to Quantum Theory
 
 ## Environment Used
 
+> This assumes that you're an instructor and you want to be able to build the Jupyter Book locally
+
 Create a [virtual environment](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments) and then install the dependencies with
 
 ```
 python -m pip install -r requirements.txt
+python -m pip install -r book/requirements.txt
 ```
+
+## Build the course Jupyter Book
+
+From the top level directory in the virtual environment run
+
+```
+make
+```
+
+To view the built Jupyter Book in your local browser click the resulting localhost URL printed to screen.
