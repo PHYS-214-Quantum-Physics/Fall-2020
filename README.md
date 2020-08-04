@@ -25,3 +25,9 @@ make
 ```
 
 To view the built Jupyter Book in your local browser click the resulting localhost URL printed to screen.
+To clean the built results and make a new build from scratch run
+
+```
+make clean
+make
+```
