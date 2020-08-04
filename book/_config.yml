@@ -1,7 +1,7 @@
 # https://jupyterbook.org/customize/config.html
 # Book settings
 title: Introdcution to Quantum Physics
-author: Neubauer Group Lab
+author: Mark Neubauer
 logo: assets/logo.png
 
 # HTML-specific settings
