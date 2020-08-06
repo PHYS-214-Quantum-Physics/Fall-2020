@@ -15,7 +15,8 @@ html:
 repository:
   url: https://github.com/PHYS-214-Quantum-Physics/Fall-2020
   path_to_book: book
-  branch: master
+  # branch: master
+  branch: prelab/lab-1
 
 # Launch button settings
 launch_buttons:
