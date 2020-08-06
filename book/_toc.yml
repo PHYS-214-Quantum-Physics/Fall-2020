@@ -1,4 +1,11 @@
 # https://jupyterbook.org/customize/toc.html
 - file: introduction
 
-- file: example-prelab
+- part: Getting Started
+  chapters:
+  - file: example-prelab
+
+- part: Lab 1
+  chapters:
+  - file: lab_1/prelab-1
+    title: Prelab 1
