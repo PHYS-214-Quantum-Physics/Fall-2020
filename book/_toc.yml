@@ -9,3 +9,5 @@
   chapters:
   - file: lab-1/prelab-1
     title: Prelab 1
+  - file: lab-1/prelab-1-md
+    title: Prelab 1 from pure Markdown
