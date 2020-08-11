@@ -1,5 +1,5 @@
-ARG BASE_CONTAINER=jupyter/minimal-notebook:latest
-FROM BASE_CONTAINER
+ARG BASE_IMAGE=jupyter/minimal-notebook:latest
+FROM ${BASE_IMAGE} as base
 
 USER root
 
