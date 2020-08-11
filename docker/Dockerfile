@@ -1,14 +1,15 @@
 ARG BASE_CONTAINER=jupyter/minimal-notebook:latest
-FROM $BASE_CONTAINER
+FROM BASE_CONTAINER
 
 USER root
 
 # ffmpeg for matplotlib anim & dvipng for latex labels
 RUN apt-get update && \
     apt-get install -y --no-install-recommends ffmpeg dvipng && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /home/jovyan/work
 
-USER $NB_UID
+USER ${NB_UID}
 
 COPY docker/jupyter_notebook_config.py /etc/jupyter/
 COPY requirements.txt /requirements.txt
@@ -35,8 +36,6 @@ ENV XDG_CACHE_HOME="/home/${NB_USER}/.cache/"
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
-USER $NB_UID
-
-WORKDIR $HOME
+WORKDIR ${HOME}
 
 CMD ["start.sh", "jupyter", "lab"]

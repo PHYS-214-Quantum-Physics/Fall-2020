@@ -8,5 +8,6 @@ c.NotebookApp.ip = "0.0.0.0"
 c.NotebookApp.open_browser = False
 c.NotebookApp.password = ""
 c.NotebookApp.port = 8080
+c.NotebookApp.custom_display_url = "http://localhost:8080"
 c.NotebookApp.token = ""
 c.FileContentsManager.delete_to_trash = False
