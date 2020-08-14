@@ -10,4 +10,5 @@ c.NotebookApp.password = ""
 c.NotebookApp.port = 8080
 c.NotebookApp.custom_display_url = "http://localhost:8080"
 c.NotebookApp.token = ""
+c.NotebookApp.allow_origin = "*"
 c.FileContentsManager.delete_to_trash = False
