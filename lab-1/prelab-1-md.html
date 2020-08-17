@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Physics 214 - Prelab 1 &#8212; Introdcution to Quantum Physics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Physics 214 - Prelab 1" href="prelab-1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introdcution to Quantum Physics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Getting Started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../example-prelab.html">
+   Example PHYS 214 prelab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lab 1
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prelab-1.html">
+   Prelab 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Prelab 1 from pure Markdown
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lab-1/prelab-1-md.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/PHYS-214-Quantum-Physics/Fall-2020"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/PHYS-214-Quantum-Physics/Fall-2020/issues/new?title=Issue%20on%20page%20%2Flab-1/prelab-1-md.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/PHYS-214-Quantum-Physics/Fall-2020/edit/prelab/lab-1/book/lab-1/prelab-1-md.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interference-and-diffraction">
+   Interference and Diffraction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     3.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="physics-214-prelab-1">
+<h1>Physics 214 - Prelab 1<a class="headerlink" href="#physics-214-prelab-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="interference-and-diffraction">
+<h2>Interference and Diffraction<a class="headerlink" href="#interference-and-diffraction" title="Permalink to this headline">¶</a></h2>
+<p>Name:</p>
+<p>Section:</p>
+<p>Date:</p>
+<p><u><strong>Your TA will collect this paper at the beginning of your lab section.</strong></u></p>
+<hr class="docutils" />
+<p>The basic problem is shown in the following figure, which represents light of a given wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> passing through two slits separated by a distance <span class="math notranslate nohighlight">\(d\)</span>.
+The distance to the screen is <span class="math notranslate nohighlight">\(L\)</span>.
+In this lab experiment you will <strong>measure the intensity at a position <span class="math notranslate nohighlight">\(y\)</span></strong> along the screen, which corresponds to a scattering angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<div class="figure align-default" id="id4">
+<img alt="../_images/214_prelab_1_fig_1.png" src="../_images/214_prelab_1_fig_1.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Fig. 1</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>As shown in class, the <strong>phase difference</strong> between the two light beams at position <span class="math notranslate nohighlight">\(y\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi = 2\pi(\delta/\lambda)\]</div>
+<p>$$</p>
+<p>is the path difference between the two beams.
+From phasor analysis, if the intensity arriving at the screen from each slit is <span class="math notranslate nohighlight">\(I_1\)</span>, the total intensity at <span class="math notranslate nohighlight">\(y\)</span> from both slits is:</p>
+<div class="math notranslate nohighlight">
+\[
+I = 4I_1\cos^2\frac{\phi}{2} = 4I_1\cos^2\left(\frac{\pi d}{\lambda L}y\right)
+\]</div>
+<div class="figure align-default" id="id5">
+<img alt="../_images/214_prelab_1_fig_2.png" src="../_images/214_prelab_1_fig_2.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Fig. 2</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The more general form for the interference pattern from <span class="math notranslate nohighlight">\(N\)</span> slits is:</p>
+<div class="math notranslate nohighlight">
+\[
+I = I_1\left(\frac{\sin(N\phi/2)}{\sin(\phi/2)}\right)^2.
+\]</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h3>1.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Show that this reduces to the 2-slit case when <span class="math notranslate nohighlight">\(N = 2\)</span>.</strong></p>
+<p>When we consider the <strong>diffraction</strong> of light through a single slit of width a, we find that the single-slit intensity, <span class="math notranslate nohighlight">\(I_1\)</span>, in the above equation is not simply a constant but also depends on angle.
+The <strong>single-slit pattern</strong> looks like the following plot:</p>
+<div class="figure align-default" id="id6">
+<img alt="../_images/214_prelab_1_fig_3.png" src="../_images/214_prelab_1_fig_3.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Fig. 3</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id2">
+<h3>2.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Calculate the position of the first diffraction minimum assuming a laser wavelength of 633 nm, a slit width of 20 <span class="math notranslate nohighlight">\(\mu\)</span>m, and a screen distance of 1 m.</p>
+<div class="math notranslate nohighlight">
+\[
+y = \_\_\_\_
+\]</div>
+<p><strong>Answer</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+</pre></div>
+</div>
+<p><strong>!!DO NOT FORGET TO INDICATE UNITS FOR ALL NUMERICAL ANSWER YOU PROVIDE!!</strong></p>
+<p>So the net result due to both <strong>interference and diffraction</strong> is the product of the curves in Figs. 2 and 3 (see also 214 Lecture 3):</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>3.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id7">
+<img alt="../_images/214_prelab_1_fig_4.png" src="../_images/214_prelab_1_fig_4.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Fig. 4</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>You should be able to tell what the ratio <span class="math notranslate nohighlight">\(d/a\)</span> is by just looking at the above pattern.</p>
+<div class="math notranslate nohighlight">
+\[
+d/a = \_\_\_\_
+\]</div>
+<p><strong>Answer</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+</pre></div>
+</div>
+<p>Explain your method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Physics 214 Prelab 1 Fall 2020 Edition</p>
+<p>© University of Illinois</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lab-1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="prelab-1.html" title="previous page">Physics 214 - Prelab 1</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Professor Mark Neubauer<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
